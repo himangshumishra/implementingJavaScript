@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorchanger</title>
+    <style>
+        body{
+            /* background-color: #9c0d0d; */
+        }
+    </style>
+</head>
+<body>
+    <button>click to change</button>
+    <script>
+
+        // console.log("hii");
+        console.log(Math.floor(Math.random()*16))
+
+        function colorGenerator(){
+            let hex='ABCDEF1234567890'
+            let color="#"
+            for(let i=1;i<=6;i++){
+                color+=hex[Math.floor(Math.random()*16)]
+            }
+            console.log(color);
+            return color
+
+        }
+        function colorChanger(){
+            document.body.style.backgroundColor=colorGenerator()
+        }
+
+
+        let btn=document.querySelector('button')
+        btn.addEventListener('click',colorChanger)
+
+
+
+
+
+    </script>
+</body>
+</html>
